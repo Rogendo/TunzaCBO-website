@@ -1,0 +1,63 @@
+{% extends "base3.html" %}
+{% load static %}
+{% block content %}
+<style>
+    body {
+        font-family: "Roboto", sans-serif;
+        font-size: 18px;
+        background-color: 	#2F303A;
+    }
+
+    .head_text {
+        color: white;
+    }
+    .card-body{
+    }
+    .card-content{
+            color:black;
+                    background-color:#990066;
+
+    }
+
+</style>
+<header class="masthead">
+    <div class="overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class=" col-md-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <br><br><br><h2><p class="text-light" style="text-align:center; color:white;">New Updates
+                    </p></h2>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8 mt-3 left">
+            {% for post in post_list %}
+            <div class="card mb-4">
+                <div class="card-body">
+                    <h2 class="card-title"style="color:white;">{{ post.title }}</h2>
+                    <p class="card-text text-muted h6"style="color:green;">{{ post.author }} | {{ post.created_on}} </p>
+                </div>
+                    <div class="card-content"style="color:white;">
+                    <p class="card-text"style="color:white;">{{post.content|slice:":200" }}</p>
+                    <a href="{% url 'blog:post_detail' post.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+        {% block sidebar %} {% include 'sidebar3.html' %}
+        {% include 'sidebar.html' %}
+        {% include 'sidebar2.html' %}
+
+
+        {% endblock sidebar %}
+    </div>
+</div>
+{%endblock%}

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<div class="background">
+
+
+
+<div class="container" align="center">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3>Compose Message</h3>
+      <form method="post">
+
+    {% csrf_token %}
+    <br>
+    {{ form.as_p }}
+
+
+    <button type="submit"style="color:green;">SEND</button>
+</form>
+    </div>
+  </div>
+</div>
+<style>
+    body {
+        font-family: Bauhaus 93;
+        font-size: 20px;
+        background-color: 	white;
+    }
+</style>
+</div>
+{% endblock %}

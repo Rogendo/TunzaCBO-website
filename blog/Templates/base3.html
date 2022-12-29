@@ -1,0 +1,147 @@
+{% load static %}
+<html>
+    <head>
+    <link href="{% static 'Tunza/img/logo.jpg' %}" rel="icon">
+    <link href="{% static 'Tunza/img/logo.jpg" rel="apple-touch-icon' %}">
+    <title>Tunza Comminity Based Organization</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <meta name="google" content="notranslate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="{% static 'messagearea/lib/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+        <!-- Navigation -->
+    <style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.background{
+        background-color: 	#2F303A;
+
+    }
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #006400;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+}
+.img-responsive{
+    opacity:0.2;
+}
+</style>
+</head>
+<body>
+<div class="background">
+<a href="/"class="brand-logo">
+<img src="{% static 'Tunza/img/logo.jpg' %} "height=50px></a>
+<div class="topnav">
+              <a href="{% url 'Tunza:submit' %}">Contact Us</a> </li>
+            <a href="{% url 'Tunza:gallery' %}">Gallery</a> </li>
+            <a  class="active" href="{% url 'blog:home' %}">Blog</a> </li>
+            <a href="{% url 'Tunza:about' %}" >About Us</a></li>
+            <a href="{% url 'Tunza:index' %}">Home</a> </li>
+  </div><br><br>
+<img class="img-responsive" src="{% static 'Tunza/img/banner.jpg' %}" alt="banner"></a>
+
+<body class="container full-height-grow">
+<header class="main-header">
+        {% block content %}
+        <!-- Content Goes here -->
+        {% endblock content %}
+</header>
+</body>
+</div>
+</body>
+    <footer>
+<div class="foot">
+    <style>
+    .foot {
+        font-family: Bauhaus 93;
+        font-size: 14px;
+        background-color: 	white;
+    }
+    .contact{
+        color:tomato;
+        background-color:;
+    }
+    .quote{
+        color:white;
+    }
+    </style>
+          <hr class="botm-line">
+              <div class="col-md-4 col-sm-4">
+                <h3>Contact Info</h3>
+    <div class="contact">
+
+          <br><br>
+          <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>tunzacbo2016@gmail.com</p><br>
+          <div class="space"></div>
+          <p><i class="fa fa-phone fa-fw pull-left fa-2x" ></i>+254 726330015</p><br>
+          <div class="space"></div>
+          <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>langatkevin64@gmail.com</p><br>
+          <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>P.O. BOX<br> Kimulot, 20225 - 46</p><br>
+
+          <div class="space"></div>
+          <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+254 726330015</p><br>
+          </div>
+    </div>
+        <div class="col-md-4 col-sm-4">
+            <h3>Quick links</h3><br><br>
+            <ul><a href="{% url 'Tunza:gallery' %}">Gallery</a> </ul>
+            <ul><a href="{% url 'blog:home' %}">Blog</a></ul>
+            <ul><a href="">About Us</a></ul>
+            <ul><a href="{% url 'Tunza:index' %}">Home</a></ul>
+            <br><br><br>
+            <br><br><br>
+
+        </div>
+
+        <div class="col-md-4 col-sm-4">
+            <br><br>
+            <div class="quote" style="color:Tomato;">
+            <p><i>"There can be no keener revelation of a society's soul than the way in which it treats its children.."<br>
+            lend a hand in securing our future tomorrow
+            </i></p>
+            </div>
+            <br><br><br>
+            <br><br>
+        <div class="social">
+            <h3>Follow us on..</h3>
+
+            <a href="https://instagram.com"><img src="{% static 'Tunza/img/socialmedia/instagram.png' %}" alt="instagram"style="width:50px;height50px;"></a>
+            <a href="https://twitter.com"><img src="{% static 'Tunza/img/socialmedia/twitter.png' %}" alt="twitter"style="width:50px;height:50px;"></a>
+            <a href="https://www.facebook.com/pages/category/Nonprofit-Organization/Tunza-Community-Based-Organization-301644387007342/"><img src="{% static 'Tunza/img/socialmedia/facebook.png' %}" alt="facebook"style="width:60px;height:60px;"></a>
+            <a href="https://portal.watson.is/campaigns/kevin-langat/"><img src="{% static 'Tunza/img/socialmedia/watson.png' %}" alt="watson university"style="width:5\40px;height:40px;"></a>
+
+        <style>
+            .social{
+             padding: 20px 35px;
+            }
+        </style>
+        </div>
+        </div>
+                <p><h5 style="color:grey; text-align:center;">©2020 tunzacbo.org™. All rights reserved | Designed by Peter Rogendo</h5></p>
+</div>
+    </footer>
+</html>
